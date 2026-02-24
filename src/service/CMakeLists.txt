@@ -1,0 +1,12 @@
+project(service)
+
+add_subdirectory(nodeserver)
+add_subdirectory(alarm-server)
+# add_subdirectory(edge-core)
+# add_subdirectory(linkserver)
+add_subdirectory(web-server)
+# add_subdirectory(video-server)
+add_subdirectory(modbus_server)
+add_subdirectory(servermgr)
+add_subdirectory(dds-publisher)
+add_subdirectory(dds-subscriber)

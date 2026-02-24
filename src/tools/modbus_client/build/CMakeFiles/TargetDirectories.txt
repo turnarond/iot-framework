@@ -1,0 +1,7 @@
+/home/yanchaodong/work/acoinfo/edge-framework/src/tools/modbus_client/build/CMakeFiles/modbus_client.dir
+/home/yanchaodong/work/acoinfo/edge-framework/src/tools/modbus_client/build/CMakeFiles/edit_cache.dir
+/home/yanchaodong/work/acoinfo/edge-framework/src/tools/modbus_client/build/CMakeFiles/rebuild_cache.dir
+/home/yanchaodong/work/acoinfo/edge-framework/src/tools/modbus_client/build/CMakeFiles/list_install_components.dir
+/home/yanchaodong/work/acoinfo/edge-framework/src/tools/modbus_client/build/CMakeFiles/install.dir
+/home/yanchaodong/work/acoinfo/edge-framework/src/tools/modbus_client/build/CMakeFiles/install/local.dir
+/home/yanchaodong/work/acoinfo/edge-framework/src/tools/modbus_client/build/CMakeFiles/install/strip.dir

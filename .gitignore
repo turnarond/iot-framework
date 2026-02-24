@@ -1,5 +1,0 @@
-build
-compile_commands.json
-.cache/
-.vscode/
-third-party/

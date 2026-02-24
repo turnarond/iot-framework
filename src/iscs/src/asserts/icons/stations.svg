@@ -1,0 +1,51 @@
+<!-- station.svg -->
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" style="background:#f5f7fa">
+  <!-- 标题 -->
+  <text x="400" y="40" text-anchor="middle" font-size="24" fill="#333">地下车站环控系统</text>
+
+  <!-- 风机区域 -->
+  <g id="fan-group" transform="translate(150,150)">
+    <rect x="-60" y="-30" width="120" height="60" rx="8" fill="#eef2ff" stroke="#93c5fd"/>
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#6b7280" stroke-width="2"/>
+    <path d="M0 -20 L10 -10 L0 0 L-10 -10 Z" fill="#6b7280" transform="rotate(0)"/>
+    <path d="M0 -20 L10 -10 L0 0 L-10 -10 Z" fill="#6b7280" transform="rotate(120)"/>
+    <path d="M0 -20 L10 -10 L0 0 L-10 -10 Z" fill="#6b7280" transform="rotate(240)"/>
+    <text x="0" y="40" text-anchor="middle" font-size="14" fill="#374151">送风机</text>
+    <rect x="-20" y="50" width="40" height="16" rx="4" fill="#d1d5db" id="fan-status"/>
+  </g>
+
+  <!-- 水泵区域 -->
+  <g id="pump-group" transform="translate(400,150)">
+    <rect x="-50" y="-40" width="100" height="80" rx="10" fill="#f0fdf4" stroke="#86efac"/>
+    <!-- 水泵主体 -->
+    <rect x="-30" y="-20" width="60" height="40" rx="5" fill="#dcfce7" stroke="#22c55e"/>
+    <!-- 出水管 -->
+    <rect x="30" y="-10" width="20" height="20" fill="#bbf7d0"/>
+    <!-- 进水管 -->
+    <rect x="-50" y="-10" width="20" height="20" fill="#bbf7d0"/>
+    <text x="0" y="50" text-anchor="middle" font-size="14" fill="#374151">排水泵</text>
+    <rect x="-20" y="60" width="40" height="16" rx="4" fill="#d1d5db" id="pump-status"/>
+  </g>
+
+  <!-- 照明区域 -->
+  <g id="light-group" transform="translate(650,150)">
+    <circle cx="0" cy="0" r="30" fill="#fef3c7" stroke="#fcd34d"/>
+    <path d="M-15 -15 L15 15 M15 -15 L-15 15" stroke="#ca8a04" stroke-width="3"/>
+    <text x="0" y="45" text-anchor="middle" font-size="14" fill="#374151">公共区照明</text>
+    <rect x="-20" y="55" width="40" height="16" rx="4" fill="#d1d5db" id="light-status"/>
+  </g>
+
+  <!-- 管道示意 -->
+  <path d="M210 150 Q 300 100 390 150" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M450 150 Q 550 100 640 150" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- 图例 -->
+  <g transform="translate(50,500)">
+    <rect x="0" y="0" width="15" height="15" fill="#d1d5db"/>
+    <text x="20" y="12" font-size="12" fill="#6b7280">— 状态指示</text>
+    <rect x="0" y="25" width="15" height="15" rx="4" fill="#bef264"/>
+    <text x="20" y="37" font-size="12" fill="#6b7280">— 运行中</text>
+    <rect x="0" y="50" width="15" height="15" rx="4" fill="#fecaca"/>
+    <text x="20" y="62" font-size="12" fill="#6b7280">— 故障</text>
+  </g>
+</svg>

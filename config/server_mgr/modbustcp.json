@@ -1,0 +1,10 @@
+{
+    "name": "modbustcp",
+    "executor": "",
+    "exePath": "./drivers/modbustcp/modbustcp",
+    "args": [],
+    "delaySec": 3,
+    "restart": true,
+    "restartCount": 5,
+    "stdout": "enabled"
+}

@@ -1,0 +1,23 @@
+{
+  "server": {
+    "port": 1502,
+    "max_connections": 100,
+    "buffer_size": 1024
+  },
+  "slaves": [
+    {
+      "slave_id": 1,
+      "coils_count": 1000,
+      "discrete_inputs_count": 1000,
+      "holding_registers_count": 1000,
+      "input_registers_count": 1000
+    },
+    {
+      "slave_id": 2,
+      "coils_count": 500,
+      "discrete_inputs_count": 500,
+      "holding_registers_count": 500,
+      "input_registers_count": 500
+    }
+  ]
+}

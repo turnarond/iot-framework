@@ -1,0 +1,10 @@
+{
+    "name": "modbus_server",
+    "executor": "",
+    "exePath": "./modbus_server",
+    "args": [],
+    "delaySec": 3,
+    "restart": true,
+    "restartCount": 5,
+    "stdout": "enabled"
+}

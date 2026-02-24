@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="uft-8"?>
+<LogConf ChkCfgMdfyPeriod="5">
+<General CurrentLogLV = "ERROR" SaveDays="5" FileMaxKb="10000" FileMaxNo = "10" LogOnMonitor="1" />
+<node_server CurrentLogLV = "DEBUG" SaveDays="5" FileMaxKb="10000" FileMaxNo = "10" LogOnMonitor="1" />
+<edge-core CurrentLogLV = "DEBUG" SaveDays="5" FileMaxKb="10000" FileMaxNo = "10" LogOnMonitor="1" />
+<web-server CurrentLogLV = "DEBUG" SaveDays="5" FileMaxKb="10000" FileMaxNo = "10" LogOnMonitor="1" />
+<modbustcp CurrentLogLV = "DEBUG" SaveDays="5" FileMaxKb="10000" FileMaxNo = "10" LogOnMonitor="1" />
+<modbus_server CurrentLogLV = "DEBUG" SaveDays="5" FileMaxKb="10000" FileMaxNo = "10" LogOnMonitor="1" />
+<servermgr CurrentLogLV = "DEBUG" SaveDays="5" FileMaxKb="10000" FileMaxNo = "10" LogOnMonitor="1" />
+<video-server CurrentLogLV = "DEBUG" SaveDays="5" FileMaxKb="10000" FileMaxNo = "10" LogOnMonitor="1" />
+</LogConf>
+                  

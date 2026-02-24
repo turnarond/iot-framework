@@ -1,0 +1,29 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080,
+    "rtsp_port": 554,
+    "rtmp_port": 1935,
+    "http_port": 80
+  },
+  "zlmediakit": {
+    "enabled": true,
+    "path": "/usr/bin/MediaServer",
+    "config_path": "/etc/zlmediakit/config.ini"
+  },
+  "ffmpeg": {
+    "path": "/usr/bin/ffmpeg"
+  },
+  "plugins": {
+    "directory": "./plugins",
+    "enabled": ["rtsp", "hikvision", "dahua", "gb28181"]
+  },
+  "logging": {
+    "level": "info",
+    "directory": "./logs"
+  },
+  "devices": {
+    "discovery_interval": 60,
+    "status_check_interval": 30
+  }
+}

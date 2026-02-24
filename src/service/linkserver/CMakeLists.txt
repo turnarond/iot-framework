@@ -1,0 +1,3 @@
+project(linkserver)
+
+subdirs(linkserver linkevt_alarm linkact_writetag_multiple linkact_writetag_single)

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/modbus_client.dir/src/main.cpp.o -o modbus_client  -lpthread 

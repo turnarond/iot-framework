@@ -1,0 +1,10 @@
+{
+    "name": "web_server",
+    "executor": "",
+    "exePath": "./web-server",
+    "args": [],
+    "delaySec": 3,
+    "restart": true,
+    "restartCount": 5,
+    "stdout": "enabled"
+}

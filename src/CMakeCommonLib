@@ -1,0 +1,46 @@
+# 获取项目根目录
+get_filename_component(PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}/../" ABSOLUTE)
+message(STATUS "Project root: ${PROJECT_ROOT}")
+
+# 系统架构检测
+set(SYSTEM_NAME ${CMAKE_SYSTEM_NAME})
+string(TOLOWER ${SYSTEM_NAME} SYSTEM_NAME)
+message(STATUS "Current CMake system name is: " ${SYSTEM_NAME})
+
+# 确定架构（使用工具链设置的处理器）
+set(TARGET_ARCH ${CMAKE_SYSTEM_PROCESSOR})
+message(STATUS "Target architecture: ${TARGET_ARCH}")
+
+# 项目私有依赖路径
+set(LW_INCLUDE_DIR "${PROJECT_ROOT}/include")
+set(LW_DATA_DIR "${PROJECT_ROOT}/data")
+set(LW_SRC_DIR "${PROJECT_ROOT}/src")
+set(LW_LIB_DIR_BASE "${PROJECT_ROOT}/lib")
+set(LW_BIN_DIR "${PROJECT_ROOT}/bin")
+set(LW_SCRIPT_DIR "${PROJECT_ROOT}/scripts")
+set(LW_CONFIG_DIR "${PROJECT_ROOT}/config")
+
+# 根据目标架构确定库路径
+if (${SYSTEM_NAME} MATCHES "sylixos")
+    set(LW_LIB_DIR "${LW_LIB_DIR_BASE}/sylixos/${TARGET_ARCH}")
+elseif (${SYSTEM_NAME} MATCHES "qnx")
+    set(LW_LIB_DIR "${LW_LIB_DIR_BASE}/qnx/${TARGET_ARCH}")
+elseif (${SYSTEM_NAME} MATCHES "android")
+    set(LW_LIB_DIR "${LW_LIB_DIR_BASE}/android")
+else()
+    set(LW_LIB_DIR "${LW_LIB_DIR_BASE}/linux/${TARGET_ARCH}")
+endif()
+
+message(STATUS "Project include directory: ${LW_INCLUDE_DIR}")
+message(STATUS "Project library directory: ${LW_LIB_DIR}")
+
+# 系统库配置
+if(NOT ${SYSTEM_NAME} MATCHES "sylixos|qnx|android")
+    set(TARGET_LIBRARIES "pthread;rt")
+    link_libraries(${TARGET_LIBRARIES})
+endif()
+
+# 调试输出
+message(STATUS "CMAKE_SYSROOT = ${CMAKE_SYSROOT}")
+message(STATUS "CMAKE_FIND_ROOT_PATH_MODE_INCLUDE = ${CMAKE_FIND_ROOT_PATH_MODE_INCLUDE}")
+message(STATUS "CMAKE_FIND_ROOT_PATH_MODE_LIBRARY = ${CMAKE_FIND_ROOT_PATH_MODE_LIBRARY}")

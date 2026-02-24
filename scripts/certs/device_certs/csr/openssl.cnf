@@ -1,0 +1,23 @@
+[ req ]
+default_bits        = 256
+distinguished_name  = req_distinguished_name
+req_extensions      = req_ext
+prompt              = no
+
+[ req_distinguished_name ]
+C  = CN
+ST = Beijing
+L  = Beijing
+O  = IoT Edge Network
+OU = Device Registration
+CN = EDGE-DEVICE-001
+
+[ req_ext ]
+keyUsage = digitalSignature, keyEncipherment
+extendedKeyUsage = clientAuth
+subjectAltName = @alt_names
+1.3.6.1.4.1.12345.1.1 = ASN1:UTF8String:Edge-Compute-V2  # 自定义OID存储设备型号
+
+[ alt_names ]
+DNS.1 = EDGE-DEVICE-001
+URI.1 = urn:deviceid:EDGE-DEVICE-001

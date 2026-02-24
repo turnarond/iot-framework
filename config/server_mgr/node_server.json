@@ -1,0 +1,10 @@
+{
+    "name": "node_server",
+    "executor": "",
+    "exePath": "./node_server",
+    "args": [],
+    "delaySec": 3,
+    "restart": true,
+    "restartCount": 5,
+    "stdout": "enabled"
+}
